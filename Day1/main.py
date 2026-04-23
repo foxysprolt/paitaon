@@ -1,10 +1,30 @@
-#primeiro vou pegar as informações importantes e guardas elas como variaveis
-celsius = float(input("Digite os Graus Celsius para transforma-los em Fahrenheit: "))
-Fahrenheit = float(input("Digite os Graus Fahrenheit para transforma-los em Celsius: "))
+print("bem vindo a calculadora!") 
 
-dolar = float(input("Digite os dolares para transforma-los em reais: "))
-real = float(input("Digite os reais  para transforma-los em dolares: "))
+def calcular():
+    if opcao == 1:
+        celsius_valor = float(input("Digite os Graus Celsius para transforma-los em Fahrenheit: "))
+        resultado =  (celsius_valor * 9/5) + 32
+        return resultado
+    
+    elif opcao == 2:
+        fahrenheit_valor = float(input("Digite os Graus Fahrenheit para transforma-los em Celsius: "))
+        resultado = (fahrenheit_valor - 32) * 5/9
+        return resultado
+    
+    elif opcao == 3:
+        dolar_valor = float(input("Digite o valor em dolar para transformar em real: "))
+        resultado = dolar_valor / 5
+        return resultado
+    
+    elif opcao == 4:
+        real_valor = float(input("Digite o valor em real para transformar em dolar: "))
+        resultado = real_valor * 5
+        return resultado
+    
+    else:
+        print("Opção não existe!")
 
-metro = float(input("Digite os metros para transforma-los em centimetros: "))
-centimetros = float(input("Digite os centimetros para transforma-los em metros: "))
+     
+opcao = int(input("""Selecione uma opção:\n(1) transformar Celsius em Fahrenheit\n(2) transformar Fahrenhei em Celsius\n(3) Transformar Dolar em Real\n(4) Transformar Real em Dolar\n """))
 
+print(calcular())
